@@ -5,18 +5,18 @@ namespace TwitchDownloaderWebAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class TwitchDownloaderController : ControllerBase
 {
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<TwitchDownloaderController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public TwitchDownloaderController(ILogger<TwitchDownloaderController> logger)
     {
         _logger = logger;
     }
 
     [HttpPost]
-    public int Downloader(string args)
+    public int Downloader([FromBody] string args)
     {
         Console.WriteLine(args.Split()[0]);
         Console.WriteLine(@"Executing..." + args);
@@ -29,7 +29,7 @@ public class WeatherForecastController : ControllerBase
         }
         catch
         {
-            return StatusCodes.Status400BadRequest;
+            return StatusCodes.Status406NotAcceptable;
         }
     }
 }

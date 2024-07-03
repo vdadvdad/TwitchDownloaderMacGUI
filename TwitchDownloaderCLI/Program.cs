@@ -13,9 +13,13 @@ using TwitchDownloaderCore.Tools;
 
 namespace TwitchDownloaderCLI
 {
-    internal static class Program
+    public static class Program
     {
         private static void Main(string[] args)
+        {
+            CallCore(args);
+        }
+        public static void CallCore(string[] args)
         {
             var preParsedArgs = PreParseArgs.Parse(args, Path.GetFileName(Environment.ProcessPath));
 
