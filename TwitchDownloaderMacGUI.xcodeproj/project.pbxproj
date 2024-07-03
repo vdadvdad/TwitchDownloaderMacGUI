@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB55F3602C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */; };
+		BB55F3622C2FF86A00F2253E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3612C2FF86A00F2253E /* ContentView.swift */; };
+		BB55F3642C2FF86B00F2253E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55F3632C2FF86B00F2253E /* Assets.xcassets */; };
+		BB55F3672C2FF86B00F2253E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */; };
+		BB55F3722C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */; };
+		BB55F37C2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */; };
+		BB55F37E2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */; };
+		BB55F3952C33F59100F2253E /* VideoDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3942C33F59100F2253E /* VideoDownloadView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB55F36E2C2FF86B00F2253E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB55F3542C2FF86A00F2253E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB55F35B2C2FF86A00F2253E;
+			remoteInfo = TwitchDownloaderMacGUI;
+		};
+		BB55F3782C2FF86B00F2253E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB55F3542C2FF86A00F2253E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB55F35B2C2FF86A00F2253E;
+			remoteInfo = TwitchDownloaderMacGUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB55F35C2C2FF86A00F2253E /* TwitchDownloaderMacGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchDownloaderMacGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIApp.swift; sourceTree = "<group>"; };
+		BB55F3612C2FF86A00F2253E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB55F3632C2FF86B00F2253E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB55F3682C2FF86B00F2253E /* TwitchDownloaderMacGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwitchDownloaderMacGUI.entitlements; sourceTree = "<group>"; };
+		BB55F36D2C2FF86B00F2253E /* TwitchDownloaderMacGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchDownloaderMacGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUITests.swift; sourceTree = "<group>"; };
+		BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchDownloaderMacGUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITests.swift; sourceTree = "<group>"; };
+		BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB55F3942C33F59100F2253E /* VideoDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloadView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB55F3592C2FF86A00F2253E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F36A2C2FF86B00F2253E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F3742C2FF86B00F2253E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB55F3532C2FF86A00F2253E = {
+			isa = PBXGroup;
+			children = (
+				BB55F35E2C2FF86A00F2253E /* TwitchDownloaderMacGUI */,
+				BB55F3702C2FF86B00F2253E /* TwitchDownloaderMacGUITests */,
+				BB55F37A2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests */,
+				BB55F35D2C2FF86A00F2253E /* Products */,
+				BB55F38A2C2FFC7F00F2253E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB55F35D2C2FF86A00F2253E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F35C2C2FF86A00F2253E /* TwitchDownloaderMacGUI.app */,
+				BB55F36D2C2FF86B00F2253E /* TwitchDownloaderMacGUITests.xctest */,
+				BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB55F35E2C2FF86A00F2253E /* TwitchDownloaderMacGUI */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */,
+				BB55F3612C2FF86A00F2253E /* ContentView.swift */,
+				BB55F3632C2FF86B00F2253E /* Assets.xcassets */,
+				BB55F3682C2FF86B00F2253E /* TwitchDownloaderMacGUI.entitlements */,
+				BB55F3652C2FF86B00F2253E /* Preview Content */,
+				BB55F3942C33F59100F2253E /* VideoDownloadView.swift */,
+			);
+			path = TwitchDownloaderMacGUI;
+			sourceTree = "<group>";
+		};
+		BB55F3652C2FF86B00F2253E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB55F3702C2FF86B00F2253E /* TwitchDownloaderMacGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */,
+			);
+			path = TwitchDownloaderMacGUITests;
+			sourceTree = "<group>";
+		};
+		BB55F37A2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */,
+				BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */,
+			);
+			path = TwitchDownloaderMacGUIUITests;
+			sourceTree = "<group>";
+		};
+		BB55F38A2C2FFC7F00F2253E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB55F35B2C2FF86A00F2253E /* TwitchDownloaderMacGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB55F3812C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUI" */;
+			buildPhases = (
+				BB55F3582C2FF86A00F2253E /* Sources */,
+				BB55F3592C2FF86A00F2253E /* Frameworks */,
+				BB55F35A2C2FF86A00F2253E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitchDownloaderMacGUI;
+			productName = TwitchDownloaderMacGUI;
+			productReference = BB55F35C2C2FF86A00F2253E /* TwitchDownloaderMacGUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB55F36C2C2FF86B00F2253E /* TwitchDownloaderMacGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB55F3842C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUITests" */;
+			buildPhases = (
+				BB55F3692C2FF86B00F2253E /* Sources */,
+				BB55F36A2C2FF86B00F2253E /* Frameworks */,
+				BB55F36B2C2FF86B00F2253E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB55F36F2C2FF86B00F2253E /* PBXTargetDependency */,
+			);
+			name = TwitchDownloaderMacGUITests;
+			productName = TwitchDownloaderMacGUITests;
+			productReference = BB55F36D2C2FF86B00F2253E /* TwitchDownloaderMacGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB55F3762C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB55F3872C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUIUITests" */;
+			buildPhases = (
+				BB55F3732C2FF86B00F2253E /* Sources */,
+				BB55F3742C2FF86B00F2253E /* Frameworks */,
+				BB55F3752C2FF86B00F2253E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB55F3792C2FF86B00F2253E /* PBXTargetDependency */,
+			);
+			name = TwitchDownloaderMacGUIUITests;
+			productName = TwitchDownloaderMacGUIUITests;
+			productReference = BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB55F3542C2FF86A00F2253E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					BB55F35B2C2FF86A00F2253E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					BB55F36C2C2FF86B00F2253E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BB55F35B2C2FF86A00F2253E;
+					};
+					BB55F3762C2FF86B00F2253E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BB55F35B2C2FF86A00F2253E;
+					};
+				};
+			};
+			buildConfigurationList = BB55F3572C2FF86A00F2253E /* Build configuration list for PBXProject "TwitchDownloaderMacGUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB55F3532C2FF86A00F2253E;
+			productRefGroup = BB55F35D2C2FF86A00F2253E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB55F35B2C2FF86A00F2253E /* TwitchDownloaderMacGUI */,
+				BB55F36C2C2FF86B00F2253E /* TwitchDownloaderMacGUITests */,
+				BB55F3762C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB55F35A2C2FF86A00F2253E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB55F3672C2FF86B00F2253E /* Preview Assets.xcassets in Resources */,
+				BB55F3642C2FF86B00F2253E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F36B2C2FF86B00F2253E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F3752C2FF86B00F2253E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB55F3582C2FF86A00F2253E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB55F3622C2FF86A00F2253E /* ContentView.swift in Sources */,
+				BB55F3602C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift in Sources */,
+				BB55F3952C33F59100F2253E /* VideoDownloadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F3692C2FF86B00F2253E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB55F3722C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB55F3732C2FF86B00F2253E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB55F37E2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift in Sources */,
+				BB55F37C2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB55F36F2C2FF86B00F2253E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB55F35B2C2FF86A00F2253E /* TwitchDownloaderMacGUI */;
+			targetProxy = BB55F36E2C2FF86B00F2253E /* PBXContainerItemProxy */;
+		};
+		BB55F3792C2FF86B00F2253E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB55F35B2C2FF86A00F2253E /* TwitchDownloaderMacGUI */;
+			targetProxy = BB55F3782C2FF86B00F2253E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BB55F37F2C2FF86B00F2253E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB55F3802C2FF86B00F2253E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BB55F3822C2FF86B00F2253E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TwitchDownloaderMacGUI/TwitchDownloaderMacGUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TwitchDownloaderMacGUI/Preview Content\"";
+				DEVELOPMENT_TEAM = QQ5K2WLL9F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BB55F3832C2FF86B00F2253E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TwitchDownloaderMacGUI/TwitchDownloaderMacGUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TwitchDownloaderMacGUI/Preview Content\"";
+				DEVELOPMENT_TEAM = QQ5K2WLL9F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BB55F3852C2FF86B00F2253E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitchDownloaderMacGUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TwitchDownloaderMacGUI";
+			};
+			name = Debug;
+		};
+		BB55F3862C2FF86B00F2253E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitchDownloaderMacGUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TwitchDownloaderMacGUI";
+			};
+			name = Release;
+		};
+		BB55F3882C2FF86B00F2253E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TwitchDownloaderMacGUI;
+			};
+			name = Debug;
+		};
+		BB55F3892C2FF86B00F2253E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TwitchDownloaderMacGUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB55F3572C2FF86A00F2253E /* Build configuration list for PBXProject "TwitchDownloaderMacGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB55F37F2C2FF86B00F2253E /* Debug */,
+				BB55F3802C2FF86B00F2253E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB55F3812C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB55F3822C2FF86B00F2253E /* Debug */,
+				BB55F3832C2FF86B00F2253E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB55F3842C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB55F3852C2FF86B00F2253E /* Debug */,
+				BB55F3862C2FF86B00F2253E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB55F3872C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB55F3882C2FF86B00F2253E /* Debug */,
+				BB55F3892C2FF86B00F2253E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB55F3542C2FF86A00F2253E /* Project object */;
+}
