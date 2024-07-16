@@ -4,7 +4,7 @@ This project is a version of [TwitchDownloader](https://github.com/lay295/Twitch
 Some of the original code for the CLI was changed to account that all the commands will be received via POST requests through Web API and not via command line. This means that this code will not support newer versions of Twitch Downloader, as with Web API support being added, some principles of libraries were changed.
 ## Project's To-Do list
 - [x] Correctly send data from client to server 
-- [] Change how data is sent, as now it is transferred as a plain string which is passed as an argument into main function (essentially acting like a CLI input)
-- [] Made library send data back as well, as currently data can't be sent back from the library, so it is a one-way communication, only client -> server
-- [] Don't stop server on error, just throw message back to client
-- [] Implement all the modes of the original library
+- [ ] Change how data is sent, as now it is transferred as a plain string which is passed as an argument into main function (essentially acting like a CLI input)
+- [ ] Made library send data back as well, as currently data can't be sent back from the library, so it is a one-way communication, only client -> server
+- [ ] Don't stop server on error, just throw message back to client
+- [ ] Implement all the modes of the original library
