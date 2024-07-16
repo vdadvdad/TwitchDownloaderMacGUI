@@ -8,3 +8,4 @@ Some of the original code for the CLI was changed to account that all the comman
 - [ ] Made library send data back as well, as currently data can't be sent back from the library, so it is a one-way communication, only client -> server
 - [ ] Don't stop server on error, just throw message back to client
 - [ ] Implement all the modes of the original library
+- [ ] Create a makefile to complile C# and Swift parts into one executable
