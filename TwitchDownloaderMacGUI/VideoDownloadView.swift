@@ -27,8 +27,10 @@ struct VideoDownloadView: View {
         requestString += "-u " + link + " "
         requestString += "-b " + String(describing: start_time ?? 0) + " "
         requestString += "-e " + String(describing: end_time ?? 0) + " "
-        requestString += "-o " + video_name
-        let url = URL(string: "https://localhost:7084/twitchdownloader")!
+        requestString += "-o " + video_name + " "
+        requestString += "--ffmpeg-path " + (Bundle.main.path(forResource: "ffmpeg", ofType: "") ?? "") + " "
+        requestString += "--file-path " + "~/Downloads"
+        let url = URL(string: "https://localhost:5001/twitchdownloader")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("text/json", forHTTPHeaderField: "Content-Type")
@@ -37,14 +39,14 @@ struct VideoDownloadView: View {
         request.httpBody = data
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
-            let statusCode = (response as! HTTPURLResponse).statusCode
-            if statusCode == 201 {
-                print("Success")
-            }
-            else {
-                print("Unable to download")
-                print(statusCode)
-            }
+            //let statusCode = (response as! HTTPURLResponse).statusCode
+            //if statusCode == 201 {
+            //    print("Success")
+            //}
+            //else {
+            //    print("Unable to download")
+            //    print(statusCode)
+            //}
             
         }
         task.resume()

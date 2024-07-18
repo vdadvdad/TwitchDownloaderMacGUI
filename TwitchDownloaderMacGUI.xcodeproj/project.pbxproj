@@ -7,15 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB55F3602C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */; };
-		BB55F3622C2FF86A00F2253E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3612C2FF86A00F2253E /* ContentView.swift */; };
-		BB55F3642C2FF86B00F2253E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55F3632C2FF86B00F2253E /* Assets.xcassets */; };
-		BB55F3672C2FF86B00F2253E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */; };
+		BB2897992C465BCB00B49561 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2896DC2C465BCB00B49561 /* Preview Assets.xcassets */; };
+		BB28979A2C465BCB00B49561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2896DE2C465BCB00B49561 /* Assets.xcassets */; };
+		BB28979B2C465BCB00B49561 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896DF2C465BCB00B49561 /* ContentView.swift */; };
+		BB28979C2C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896E12C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift */; };
+		BB28979D2C465BCB00B49561 /* VideoDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896E22C465BCB00B49561 /* VideoDownloadView.swift */; };
+		BB2898502C468F5900B49561 /* TwitchDownloaderWPF.sln in Sources */ = {isa = PBXBuildFile; fileRef = BB2897822C465BCB00B49561 /* TwitchDownloaderWPF.sln */; };
 		BB55F3722C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */; };
 		BB55F37C2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */; };
 		BB55F37E2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */; };
-		BB55F3952C33F59100F2253E /* VideoDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3942C33F59100F2253E /* VideoDownloadView.swift */; };
+		BBE24DB82C46B84300A1134B /* publish in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DB72C46B84300A1134B /* publish */; };
+		BBE24DBA2C48D10C00A1134B /* osx-x64 in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DB92C48D10C00A1134B /* osx-x64 */; };
+		BBE24DBC2C48D23E00A1134B /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DBB2C48D23E00A1134B /* ffmpeg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		BB28983A2C46849700B49561 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.sln";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+				"$(SRCROOT)/GUIBackend",
+			);
+			runOncePerArchitecture = 0;
+			script = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\npwd\n$dotnet restore $SCRIPT_INPUT_FILE\necho \"done restoring\"\n$dotnet clean $SCRIPT_INPUT_FILE\necho \"done cleaning\"\n$dotnet build $SCRIPT_INPUT_FILE\necho \"done building\"\n$dotnet publish $SCRIPT_INPUT_FILE -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		BB55F36E2C2FF86B00F2253E /* PBXContainerItemProxy */ = {
@@ -35,18 +56,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB2896DC2C465BCB00B49561 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB2896DE2C465BCB00B49561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB2896DF2C465BCB00B49561 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB2896E02C465BCB00B49561 /* TwitchDownloaderMacGUI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TwitchDownloaderMacGUI.entitlements; sourceTree = "<group>"; };
+		BB2896E12C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIApp.swift; sourceTree = "<group>"; };
+		BB2896E22C465BCB00B49561 /* VideoDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDownloadView.swift; sourceTree = "<group>"; };
+		BB2897822C465BCB00B49561 /* TwitchDownloaderWPF.sln */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TwitchDownloaderWPF.sln; sourceTree = "<group>"; };
+		BB2898362C465BF200B49561 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		BB2898372C465BF200B49561 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BB28983D2C46874800B49561 /* TwitchDownloaderCLI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TwitchDownloaderCLI; sourceTree = "<group>"; };
+		BB28983E2C46874800B49561 /* TwitchDownloaderCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TwitchDownloaderCore; sourceTree = "<group>"; };
+		BB28984D2C46876D00B49561 /* TwitchDownloaderWebAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TwitchDownloaderWebAPI; sourceTree = "<group>"; };
 		BB55F35C2C2FF86A00F2253E /* TwitchDownloaderMacGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchDownloaderMacGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIApp.swift; sourceTree = "<group>"; };
-		BB55F3612C2FF86A00F2253E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BB55F3632C2FF86B00F2253E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB55F3682C2FF86B00F2253E /* TwitchDownloaderMacGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwitchDownloaderMacGUI.entitlements; sourceTree = "<group>"; };
 		BB55F36D2C2FF86B00F2253E /* TwitchDownloaderMacGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchDownloaderMacGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUITests.swift; sourceTree = "<group>"; };
 		BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchDownloaderMacGUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITests.swift; sourceTree = "<group>"; };
 		BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BB55F3942C33F59100F2253E /* VideoDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloadView.swift; sourceTree = "<group>"; };
+		BBE24DB72C46B84300A1134B /* publish */ = {isa = PBXFileReference; lastKnownFileType = folder; name = publish; path = TwitchDownloaderWebAPI/bin/Debug/net6.0/publish; sourceTree = "<group>"; };
+		BBE24DB92C48D10C00A1134B /* osx-x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "osx-x64"; path = "TwitchDownloaderWebAPI/bin/Release/net6.0/osx-x64"; sourceTree = "<group>"; };
+		BBE24DBB2C48D23E00A1134B /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffmpeg; path = ../../../Downloads/ffmpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +104,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB2896DD2C465BCB00B49561 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB2896DC2C465BCB00B49561 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB2896E32C465BCB00B49561 /* TwitchDownloaderMacGUI */ = {
+			isa = PBXGroup;
+			children = (
+				BB2896DD2C465BCB00B49561 /* Preview Content */,
+				BB2896DE2C465BCB00B49561 /* Assets.xcassets */,
+				BB2896DF2C465BCB00B49561 /* ContentView.swift */,
+				BB2896E02C465BCB00B49561 /* TwitchDownloaderMacGUI.entitlements */,
+				BB2896E12C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift */,
+				BB2896E22C465BCB00B49561 /* VideoDownloadView.swift */,
+			);
+			path = TwitchDownloaderMacGUI;
+			sourceTree = "<group>";
+		};
 		BB55F3532C2FF86A00F2253E = {
 			isa = PBXGroup;
 			children = (
-				BB55F35E2C2FF86A00F2253E /* TwitchDownloaderMacGUI */,
+				BBE24DBB2C48D23E00A1134B /* ffmpeg */,
+				BBE24DB92C48D10C00A1134B /* osx-x64 */,
+				BBE24DB72C46B84300A1134B /* publish */,
+				BB28984D2C46876D00B49561 /* TwitchDownloaderWebAPI */,
+				BB28983D2C46874800B49561 /* TwitchDownloaderCLI */,
+				BB28983E2C46874800B49561 /* TwitchDownloaderCore */,
+				BB2898362C465BF200B49561 /* LICENSE.txt */,
+				BB2898372C465BF200B49561 /* README.md */,
 				BB55F3702C2FF86B00F2253E /* TwitchDownloaderMacGUITests */,
 				BB55F37A2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests */,
+				BB2896E32C465BCB00B49561 /* TwitchDownloaderMacGUI */,
+				BB2897822C465BCB00B49561 /* TwitchDownloaderWPF.sln */,
 				BB55F35D2C2FF86A00F2253E /* Products */,
 				BB55F38A2C2FFC7F00F2253E /* Frameworks */,
 			);
@@ -93,27 +153,6 @@
 				BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BB55F35E2C2FF86A00F2253E /* TwitchDownloaderMacGUI */ = {
-			isa = PBXGroup;
-			children = (
-				BB55F35F2C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift */,
-				BB55F3612C2FF86A00F2253E /* ContentView.swift */,
-				BB55F3632C2FF86B00F2253E /* Assets.xcassets */,
-				BB55F3682C2FF86B00F2253E /* TwitchDownloaderMacGUI.entitlements */,
-				BB55F3652C2FF86B00F2253E /* Preview Content */,
-				BB55F3942C33F59100F2253E /* VideoDownloadView.swift */,
-			);
-			path = TwitchDownloaderMacGUI;
-			sourceTree = "<group>";
-		};
-		BB55F3652C2FF86B00F2253E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BB55F3662C2FF86B00F2253E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		BB55F3702C2FF86B00F2253E /* TwitchDownloaderMacGUITests */ = {
@@ -152,6 +191,7 @@
 				BB55F35A2C2FF86A00F2253E /* Resources */,
 			);
 			buildRules = (
+				BB28983A2C46849700B49561 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -244,8 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB55F3672C2FF86B00F2253E /* Preview Assets.xcassets in Resources */,
-				BB55F3642C2FF86B00F2253E /* Assets.xcassets in Resources */,
+				BBE24DBC2C48D23E00A1134B /* ffmpeg in Resources */,
+				BBE24DBA2C48D10C00A1134B /* osx-x64 in Resources */,
+				BBE24DB82C46B84300A1134B /* publish in Resources */,
+				BB2897992C465BCB00B49561 /* Preview Assets.xcassets in Resources */,
+				BB28979A2C465BCB00B49561 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB55F3622C2FF86A00F2253E /* ContentView.swift in Sources */,
-				BB55F3602C2FF86A00F2253E /* TwitchDownloaderMacGUIApp.swift in Sources */,
-				BB55F3952C33F59100F2253E /* VideoDownloadView.swift in Sources */,
+				BB28979C2C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift in Sources */,
+				BB28979D2C465BCB00B49561 /* VideoDownloadView.swift in Sources */,
+				BB28979B2C465BCB00B49561 /* ContentView.swift in Sources */,
+				BB2898502C468F5900B49561 /* TwitchDownloaderWPF.sln in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +391,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -410,6 +455,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -439,6 +485,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwitchDownloaderMacGUI/Preview Content\"";
 				DEVELOPMENT_TEAM = QQ5K2WLL9F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,6 +512,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwitchDownloaderMacGUI/Preview Content\"";
 				DEVELOPMENT_TEAM = QQ5K2WLL9F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

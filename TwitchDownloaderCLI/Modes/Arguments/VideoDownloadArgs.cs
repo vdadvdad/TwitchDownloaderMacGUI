@@ -40,6 +40,9 @@ namespace TwitchDownloaderCLI.Modes.Arguments
         [Option("temp-path", Default = "", HelpText = "Path to temporary caching folder.")]
         public string TempFolder { get; set; }
 
+        [Option("file-path", Default = null, HelpText = "Specifies full file path for video file.")]
+        public string FileFullPath { get; set; }
+
         // Interface args
         public OverwriteBehavior OverwriteBehavior { get; set; }
         public bool? ShowBanner { get; set; }

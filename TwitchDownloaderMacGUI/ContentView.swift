@@ -25,6 +25,18 @@ struct ContentView: View {
             .frame(maxHeight: 100)
             .aspectRatio(1.0, contentMode: .fill)
     }
+    init() {
+        let process = Process()
+        let pipe = Pipe()
+        //process.standardOutput = pipe
+        let apiPath = Bundle.main.path(forResource: "TwitchDownloaderWebAPI", ofType: "", inDirectory: "osx-x64")
+        process.executableURL = URL(fileURLWithPath: "/bin/sh")
+        print(apiPath)
+        process.arguments = ["-c", apiPath!]
+        //process.arguments = ["-c", "pwd"]
+        try! process.run()
+        print(process.currentDirectoryPath)
+    }
     var body: some View {
         VStack {
             ScrollView(.horizontal) {

@@ -863,10 +863,18 @@ namespace TwitchDownloaderCore
             return returnList;
         }
 
-        public static FileInfo ClaimFile(string path, Func<FileInfo, FileInfo> fileAlreadyExistsCallback, ITaskLogger logger)
+        public static FileInfo ClaimFile(string path, string fileFullPath Func<FileInfo, FileInfo> fileAlreadyExistsCallback, ITaskLogger logger)
         {
+            if (fileFullPath == null)
+            {
             var fullPath = Path.GetFullPath(path);
             var fileInfo = new FileInfo(fullPath);
+            }
+            else
+            {
+                var fullPath = fileFullPath + path
+                var fileInfo = new FileInfo(fullPath)
+            }
             if (fileInfo.Exists)
             {
                 if (fileAlreadyExistsCallback is null)
