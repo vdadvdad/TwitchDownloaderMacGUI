@@ -80,6 +80,7 @@ namespace TwitchDownloaderCLI.Modes
                     return Array.Empty<DirectoryInfo>();
                 },
                 FileCollisionCallback = collisionHandler.HandleCollisionCallback,
+                FileFullPath = inputOptions.FileFullPath,
             };
 
             return downloadOptions;

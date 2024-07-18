@@ -29,7 +29,7 @@ struct VideoDownloadView: View {
         requestString += "-e " + String(describing: end_time ?? 0) + " "
         requestString += "-o " + video_name + " "
         requestString += "--ffmpeg-path " + (Bundle.main.path(forResource: "ffmpeg", ofType: "") ?? "") + " "
-        requestString += "--file-path " + "~/Downloads"
+        requestString += "--file-path " + "/Users/vdadvdad/Downloads"
         let url = URL(string: "https://localhost:5001/twitchdownloader")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

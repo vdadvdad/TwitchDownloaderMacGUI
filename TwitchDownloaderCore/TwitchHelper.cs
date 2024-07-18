@@ -863,17 +863,19 @@ namespace TwitchDownloaderCore
             return returnList;
         }
 
-        public static FileInfo ClaimFile(string path, string fileFullPath Func<FileInfo, FileInfo> fileAlreadyExistsCallback, ITaskLogger logger)
+        public static FileInfo ClaimFile(string path, string fileFullPath, Func<FileInfo, FileInfo> fileAlreadyExistsCallback, ITaskLogger logger)
         {
-            if (fileFullPath == null)
+            string fullPath;
+            FileInfo fileInfo;
+            if (fileFullPath == "")
             {
-            var fullPath = Path.GetFullPath(path);
-            var fileInfo = new FileInfo(fullPath);
+                fullPath = Path.GetFullPath(path);
+                fileInfo = new FileInfo(fullPath);
             }
             else
             {
-                var fullPath = fileFullPath + path
-                var fileInfo = new FileInfo(fullPath)
+                fullPath = fileFullPath + "/" + path;
+                fileInfo = new FileInfo(fullPath);
             }
             if (fileInfo.Exists)
             {

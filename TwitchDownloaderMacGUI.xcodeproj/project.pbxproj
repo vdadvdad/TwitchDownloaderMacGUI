@@ -12,29 +12,28 @@
 		BB28979B2C465BCB00B49561 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896DF2C465BCB00B49561 /* ContentView.swift */; };
 		BB28979C2C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896E12C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift */; };
 		BB28979D2C465BCB00B49561 /* VideoDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2896E22C465BCB00B49561 /* VideoDownloadView.swift */; };
-		BB2898502C468F5900B49561 /* TwitchDownloaderWPF.sln in Sources */ = {isa = PBXBuildFile; fileRef = BB2897822C465BCB00B49561 /* TwitchDownloaderWPF.sln */; };
 		BB55F3722C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F3712C2FF86B00F2253E /* TwitchDownloaderMacGUITests.swift */; };
 		BB55F37C2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */; };
 		BB55F37E2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */; };
-		BBE24DB82C46B84300A1134B /* publish in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DB72C46B84300A1134B /* publish */; };
 		BBE24DBA2C48D10C00A1134B /* osx-x64 in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DB92C48D10C00A1134B /* osx-x64 */; };
 		BBE24DBC2C48D23E00A1134B /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBE24DBB2C48D23E00A1134B /* ffmpeg */; };
+		BBE24DBF2C48FC8100A1134B /* TwitchDownloaderWebAPI.csproj in Sources */ = {isa = PBXBuildFile; fileRef = BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
 		BB28983A2C46849700B49561 /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.sln";
+			filePatterns = "*.csproj";
 			fileType = pattern.proxy;
 			inputFiles = (
 			);
 			isEditable = 1;
 			outputFiles = (
-				"$(SRCROOT)/GUIBackend",
+				"$(SRCROOT)/TwitchDownloaderWebAPI/TwitchDownloaderWebAPI",
 			);
 			runOncePerArchitecture = 0;
-			script = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\npwd\n$dotnet restore $SCRIPT_INPUT_FILE\necho \"done restoring\"\n$dotnet clean $SCRIPT_INPUT_FILE\necho \"done cleaning\"\n$dotnet build $SCRIPT_INPUT_FILE\necho \"done building\"\n$dotnet publish $SCRIPT_INPUT_FILE -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
+			script = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\nfile=\"TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj\"\npwd\n$dotnet restore $SCRIPT_INPUT_FILE\necho \"done restoring\"\n$dotnet clean $SCRIPT_INPUT_FILE\necho \"done cleaning\"\n$dotnet build $SCRIPT_INPUT_FILE\necho \"done building\"\n$dotnet publish $SCRIPT_INPUT_FILE -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
 		};
 /* End PBXBuildRule section */
 
@@ -77,6 +76,7 @@
 		BBE24DB72C46B84300A1134B /* publish */ = {isa = PBXFileReference; lastKnownFileType = folder; name = publish; path = TwitchDownloaderWebAPI/bin/Debug/net6.0/publish; sourceTree = "<group>"; };
 		BBE24DB92C48D10C00A1134B /* osx-x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "osx-x64"; path = "TwitchDownloaderWebAPI/bin/Release/net6.0/osx-x64"; sourceTree = "<group>"; };
 		BBE24DBB2C48D23E00A1134B /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffmpeg; path = ../../../Downloads/ffmpeg; sourceTree = "<group>"; };
+		BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TwitchDownloaderWebAPI.csproj; path = TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,7 @@
 		BB55F3532C2FF86A00F2253E = {
 			isa = PBXGroup;
 			children = (
+				BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */,
 				BBE24DBB2C48D23E00A1134B /* ffmpeg */,
 				BBE24DB92C48D10C00A1134B /* osx-x64 */,
 				BBE24DB72C46B84300A1134B /* publish */,
@@ -186,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB55F3812C2FF86B00F2253E /* Build configuration list for PBXNativeTarget "TwitchDownloaderMacGUI" */;
 			buildPhases = (
+				BBE24DC02C491C7400A1134B /* ShellScript */,
 				BB55F3582C2FF86A00F2253E /* Sources */,
 				BB55F3592C2FF86A00F2253E /* Frameworks */,
 				BB55F35A2C2FF86A00F2253E /* Resources */,
@@ -286,7 +288,6 @@
 			files = (
 				BBE24DBC2C48D23E00A1134B /* ffmpeg in Resources */,
 				BBE24DBA2C48D10C00A1134B /* osx-x64 in Resources */,
-				BBE24DB82C46B84300A1134B /* publish in Resources */,
 				BB2897992C465BCB00B49561 /* Preview Assets.xcassets in Resources */,
 				BB28979A2C465BCB00B49561 /* Assets.xcassets in Resources */,
 			);
@@ -308,15 +309,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BBE24DC02C491C7400A1134B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\nfile=\"TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj\"\necho \"hello\"\npwd\n$dotnet restore $file\necho \"done restoring\"\n$dotnet clean $file\necho \"done cleaning\"\n$dotnet build $file\necho \"done building\"\n$dotnet publish $file -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB55F3582C2FF86A00F2253E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE24DBF2C48FC8100A1134B /* TwitchDownloaderWebAPI.csproj in Sources */,
 				BB28979C2C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift in Sources */,
 				BB28979D2C465BCB00B49561 /* VideoDownloadView.swift in Sources */,
 				BB28979B2C465BCB00B49561 /* ContentView.swift in Sources */,
-				BB2898502C468F5900B49561 /* TwitchDownloaderWPF.sln in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +412,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -406,6 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -454,8 +477,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

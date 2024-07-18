@@ -11,6 +11,7 @@ struct ContentView: View {
     func f() {
         return
     }
+    public var process: Process
     func modeButton(imageName: String, text: String, f: @escaping () -> Void) -> some View {
         return Button(action: f) {
             VStack() {
@@ -26,7 +27,7 @@ struct ContentView: View {
             .aspectRatio(1.0, contentMode: .fill)
     }
     init() {
-        let process = Process()
+        process = Process()
         let pipe = Pipe()
         //process.standardOutput = pipe
         let apiPath = Bundle.main.path(forResource: "TwitchDownloaderWebAPI", ofType: "", inDirectory: "osx-x64")

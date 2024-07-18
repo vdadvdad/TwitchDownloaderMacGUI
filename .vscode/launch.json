@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/TwitchDownloaderCLI/bin/Debug/net6.0/TwitchDownloaderCLI.dll",
+            "args": ["videodownload", 
+                    "-u",
+                    "https://www.twitch.tv/videos/2183028726",
+                    "-b",
+                    "30",
+                    "-e",
+                    "150",
+                    "-o",
+                    "filename3.mp4",
+                    "--ffmpeg-path",
+                    "/Users/vdadvdad/Library/Developer/Xcode/DerivedData/TwitchDownloaderMacGUI-fvcqvxawnqvcwocdkrkaysgalfgr/Build/Products/Debug/TwitchDownloaderMacGUI.app/Contents/Resources/ffmpeg",
+                    "--file-path",
+                    "/Users/vdadvdad/Downloads"],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+        
+
+    ]
+}

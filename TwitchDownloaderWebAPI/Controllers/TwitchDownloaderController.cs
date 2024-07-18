@@ -1,4 +1,5 @@
 using System.Net;
+using CommandLine;
 using Microsoft.AspNetCore.Mvc;
 using TwitchDownloaderCLI.Tools;
 namespace TwitchDownloaderWebAPI.Controllers;
@@ -27,8 +28,10 @@ public class TwitchDownloaderController : ControllerBase
             Console.WriteLine(@"Executed");
             return StatusCodes.Status201Created;
         }
-        catch
+        catch (Exception e)
         {
+            Console.WriteLine(e);
+            Console.WriteLine(@"Help something is wrong");
             return StatusCodes.Status406NotAcceptable;
         }
     }

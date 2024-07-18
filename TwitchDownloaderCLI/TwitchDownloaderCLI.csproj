@@ -8,6 +8,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Platforms>AnyCPU;x64</Platforms>
     <TargetFramework>net6.0</TargetFramework>
+    <!-- <RuntimeIdentifier>osx-x64</RuntimeIdentifier> -->
     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
     <LangVersion>default</LangVersion>
   </PropertyGroup>
