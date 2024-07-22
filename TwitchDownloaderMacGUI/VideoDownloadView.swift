@@ -16,6 +16,8 @@ struct VideoDownloadView: View {
     @State private var minutes_end = ""
     @State private var seconds_end = ""
     @State private var video_name = ""
+    @State private var fileImporter = false;
+    @State private var path = "~/Downloads";
     func sendData() {
         var start_time: Int? = (Int(hours_start) ?? 0) * 3600
         start_time! += (Int(minutes_start) ?? 0) * 60
@@ -108,8 +110,23 @@ struct VideoDownloadView: View {
                         text: $video_name
                     )
                 }
+                HStack {
+                    Text("Folder to download: ").frame(alignment: .leading)
+                    Spacer()
+                    Button(path, action: {
+                        fileImporter = !fileImporter;
+                    }).fileImporter(isPresented: $fileImporter, allowedContentTypes: [.folder]) { result in
+                        switch result {
+                        case .success(let url):
+                            path = url.path()
+                        case .failure(let error):
+                            print("ERROR: " + error.localizedDescription)
+                        }
+                    }
+                }
+                
             }
-        }.padding()
+        }//.padding()
         Button(action: sendData) {
             Text("Download")
         }.frame(maxWidth: .infinity)
