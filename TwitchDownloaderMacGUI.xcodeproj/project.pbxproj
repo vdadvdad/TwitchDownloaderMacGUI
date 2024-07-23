@@ -20,6 +20,7 @@
 		BBE24DBF2C48FC8100A1134B /* TwitchDownloaderWebAPI.csproj in Sources */ = {isa = PBXBuildFile; fileRef = BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */; };
 		BBE24DC22C4E8D1100A1134B /* ChatDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE24DC12C4E8D1100A1134B /* ChatDownloadView.swift */; };
 		BBE24DC42C4E8D2700A1134B /* ClipDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE24DC32C4E8D2700A1134B /* ClipDownloadView.swift */; };
+		BBE24DC62C4F580D00A1134B /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE24DC52C4F580D00A1134B /* HttpHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -81,6 +82,7 @@
 		BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TwitchDownloaderWebAPI.csproj; path = TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj; sourceTree = "<group>"; };
 		BBE24DC12C4E8D1100A1134B /* ChatDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDownloadView.swift; sourceTree = "<group>"; };
 		BBE24DC32C4E8D2700A1134B /* ClipDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipDownloadView.swift; sourceTree = "<group>"; };
+		BBE24DC52C4F580D00A1134B /* HttpHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				BB2896E22C465BCB00B49561 /* VideoDownloadView.swift */,
 				BBE24DC12C4E8D1100A1134B /* ChatDownloadView.swift */,
 				BBE24DC32C4E8D2700A1134B /* ClipDownloadView.swift */,
+				BBE24DC52C4F580D00A1134B /* HttpHandler.swift */,
 			);
 			path = TwitchDownloaderMacGUI;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE24DC42C4E8D2700A1134B /* ClipDownloadView.swift in Sources */,
+				BBE24DC62C4F580D00A1134B /* HttpHandler.swift in Sources */,
 				BBE24DC22C4E8D1100A1134B /* ChatDownloadView.swift in Sources */,
 				BBE24DBF2C48FC8100A1134B /* TwitchDownloaderWebAPI.csproj in Sources */,
 				BB28979C2C465BCB00B49561 /* TwitchDownloaderMacGUIApp.swift in Sources */,

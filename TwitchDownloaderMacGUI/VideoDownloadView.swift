@@ -19,39 +19,7 @@ struct VideoDownloadView: View {
     @State private var fileImporter = false;
     @State private var path = "~/Downloads";
     func sendData() {
-        var start_time: Int? = (Int(hours_start) ?? 0) * 3600
-        start_time! += (Int(minutes_start) ?? 0) * 60
-        start_time! += (Int(seconds_start) ?? 0)
-        var end_time: Int? = (Int(hours_end) ?? 0) * 3600
-        end_time! += (Int(minutes_end) ?? 0) * 60
-        end_time! += (Int(seconds_end) ?? 0)
-        var requestString: String = "videodownload "
-        requestString += "-u " + link + " "
-        requestString += "-b " + String(describing: start_time ?? 0) + " "
-        requestString += "-e " + String(describing: end_time ?? 0) + " "
-        requestString += "-o " + video_name + " "
-        requestString += "--ffmpeg-path " + (Bundle.main.path(forResource: "ffmpeg", ofType: "") ?? "") + " "
-        requestString += "--file-path " + "/Users/vdadvdad/Downloads"
-        let url = URL(string: "https://localhost:5001/twitchdownloader")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("text/json", forHTTPHeaderField: "Content-Type")
-        let data = try! JSONEncoder().encode(requestString)
-        print(data.base64EncodedString())
-        request.httpBody = data
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            //let statusCode = (response as! HTTPURLResponse).statusCode
-            //if statusCode == 201 {
-            //    print("Success")
-            //}
-            //else {
-            //    print("Unable to download")
-            //    print(statusCode)
-            //}
-            
-        }
-        task.resume()
+        handler.sendVideoDownload(hours_start, minutes_start, seconds_start, hours_end, minutes_end, seconds_end, video_name, link, path)
     }
     var body: some View {
         HStack {
@@ -128,9 +96,10 @@ struct VideoDownloadView: View {
             }
         }//.padding()
         Button(action: sendData) {
-            Text("Download")
+            Text("Download VOD")
         }.frame(maxWidth: .infinity)
-            .background(Color.blue)
+            .buttonStyle(.borderedProminent)
+            .tint(Color.blue)
     }
 }
 

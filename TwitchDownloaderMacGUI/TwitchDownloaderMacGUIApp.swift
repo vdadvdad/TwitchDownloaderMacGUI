@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+public var handler = HttpHandler()
+
 @main
 struct TwitchDownloaderMacGUIApp: App {
     var body: some Scene {
