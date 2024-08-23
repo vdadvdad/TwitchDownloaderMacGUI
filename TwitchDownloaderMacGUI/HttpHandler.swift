@@ -60,8 +60,8 @@ public struct HttpHandler {
         requestString = "clipdownload "
         requestString += "-u " + link + " "
         requestString += "-o " + filename + " "
-        requestString += "--ffmpeg-path " + ffmpeg_path
-        //TODO: add path to arguments
+        requestString += "--ffmpeg-path " + ffmpeg_path + " "
+        requestString += "--file-path " + path
         sendRequest()
         
     }

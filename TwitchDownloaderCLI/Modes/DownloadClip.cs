@@ -53,6 +53,7 @@ namespace TwitchDownloaderCLI.Modes
                 EncodeMetadata = inputOptions.EncodeMetadata!.Value,
                 TempFolder = inputOptions.TempFolder,
                 FileCollisionCallback = collisionHandler.HandleCollisionCallback,
+                FileFullPath = inputOptions.FileFullPath
             };
 
             return downloadOptions;

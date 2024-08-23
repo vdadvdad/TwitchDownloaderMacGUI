@@ -874,7 +874,8 @@ namespace TwitchDownloaderCore
             }
             else
             {
-                fullPath = fileFullPath + "/" + path;
+                fullPath = fileFullPath + path;
+                Console.WriteLine(fullPath);
                 fileInfo = new FileInfo(fullPath);
             }
             if (fileInfo.Exists)

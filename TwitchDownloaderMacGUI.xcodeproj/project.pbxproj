@@ -36,7 +36,7 @@
 				"$(SRCROOT)/TwitchDownloaderWebAPI/TwitchDownloaderWebAPI",
 			);
 			runOncePerArchitecture = 0;
-			script = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\nfile=\"TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj\"\npwd\n$dotnet restore $SCRIPT_INPUT_FILE\necho \"done restoring\"\n$dotnet clean $SCRIPT_INPUT_FILE\necho \"done cleaning\"\n$dotnet build $SCRIPT_INPUT_FILE\necho \"done building\"\n$dotnet publish $SCRIPT_INPUT_FILE -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n#dotnet=\"/usr/local/share/dotnet/dotnet\"\n#file=\"/Users/vdadvdad/Documents/XcodeGit/TwitchDownloaderMacGUI/TwitchDownloaderWPF.sln\"\n#target=\"/target:TwitchDownloaderWebAPI\"\n# $SCRIPT_INPUT_FILE\npwd\n#$dotnet --version\n#$dotnet restore $SCRIPT_INPUT_FILE\n#echo \"done restoring\"\n#$dotnet clean $SCRIPT_INPUT_FILE\n#echo \"done cleaning\"\n#$dotnet build $SCRIPT_INPUT_FILE\n#echo \"done building\"\n#$dotnet publish $SCRIPT_INPUT_FILE -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\n#echo \"done publishing\"\n";
 		};
 /* End PBXBuildRule section */
 
@@ -76,7 +76,6 @@
 		BB55F3772C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchDownloaderMacGUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55F37B2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITests.swift; sourceTree = "<group>"; };
 		BB55F37D2C2FF86B00F2253E /* TwitchDownloaderMacGUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDownloaderMacGUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BBE24DB72C46B84300A1134B /* publish */ = {isa = PBXFileReference; lastKnownFileType = folder; name = publish; path = TwitchDownloaderWebAPI/bin/Debug/net6.0/publish; sourceTree = "<group>"; };
 		BBE24DB92C48D10C00A1134B /* osx-x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "osx-x64"; path = "TwitchDownloaderWebAPI/bin/Release/net6.0/osx-x64"; sourceTree = "<group>"; };
 		BBE24DBB2C48D23E00A1134B /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffmpeg; path = ../../../Downloads/ffmpeg; sourceTree = "<group>"; };
 		BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TwitchDownloaderWebAPI.csproj; path = TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj; sourceTree = "<group>"; };
@@ -140,7 +139,6 @@
 				BBE24DBD2C48FC7100A1134B /* TwitchDownloaderWebAPI.csproj */,
 				BBE24DBB2C48D23E00A1134B /* ffmpeg */,
 				BBE24DB92C48D10C00A1134B /* osx-x64 */,
-				BBE24DB72C46B84300A1134B /* publish */,
 				BB28984D2C46876D00B49561 /* TwitchDownloaderWebAPI */,
 				BB28983D2C46874800B49561 /* TwitchDownloaderCLI */,
 				BB28983E2C46874800B49561 /* TwitchDownloaderCore */,
@@ -335,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ndotnet=\"/usr/local/share/dotnet/dotnet\"\nfile=\"TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj\"\necho \"hello\"\npwd\n$dotnet restore $file\necho \"done restoring\"\n$dotnet clean $file\necho \"done cleaning\"\n$dotnet build $file\necho \"done building\"\n$dotnet publish $file -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\necho \"done publishing\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#dotnet=\"/usr/local/share/dotnet/dotnet\"\n#file=\"TwitchDownloaderWebAPI/TwitchDownloaderWebAPI.csproj\"\n#echo \"hello\"\n#pwd\n#$dotnet restore $file\n#echo \"done restoring\"\n#$dotnet clean $file\n#echo \"done cleaning\"\n#$dotnet build $file\n#echo \"done building\"\n#$dotnet publish $file -r osx-x64 --self-contained -c Release /p:PublishSingleFile=true\n#echo \"done publishing\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -514,6 +512,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TwitchDownloaderMacGUI/TwitchDownloaderMacGUI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -530,6 +530,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -541,6 +542,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TwitchDownloaderMacGUI/TwitchDownloaderMacGUI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,6 +561,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VPavlovskii.TwitchDownloaderMacGUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

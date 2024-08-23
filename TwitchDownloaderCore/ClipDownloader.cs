@@ -31,9 +31,11 @@ namespace TwitchDownloaderCore
 
         public async Task DownloadAsync(CancellationToken cancellationToken)
         {
-            var outputFileInfo = TwitchHelper.ClaimFile(downloadOptions.Filename, "", downloadOptions.FileCollisionCallback, _progress);
+            var outputFileInfo = TwitchHelper.ClaimFile(downloadOptions.Filename, downloadOptions.FileFullPath, downloadOptions.FileCollisionCallback, _progress);
+            Console.WriteLine("Observe downloadoptions.filename below");
+            Console.WriteLine(downloadOptions.Filename);
             downloadOptions.Filename = outputFileInfo.FullName;
-
+            Console.WriteLine(downloadOptions.Filename);
             // Open the destination file so that it exists in the filesystem.
             await using var outputFs = outputFileInfo.Open(FileMode.Create, FileAccess.Write, FileShare.Read);
 

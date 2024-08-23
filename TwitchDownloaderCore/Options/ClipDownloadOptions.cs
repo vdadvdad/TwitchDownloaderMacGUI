@@ -13,5 +13,6 @@ namespace TwitchDownloaderCore.Options
         public bool EncodeMetadata { get; set; }
         public string FfmpegPath { get; set; }
         public Func<FileInfo, FileInfo> FileCollisionCallback { get; set; } = info => info;
+        public string FileFullPath { get; set; }
     }
 }

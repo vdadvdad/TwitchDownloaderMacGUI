@@ -6,7 +6,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
     </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
