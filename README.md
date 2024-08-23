@@ -12,3 +12,5 @@ Some of the original code for the CLI was changed to account that all the comman
 - [ ] Implement all the modes of the original library
 - [x] Create a proper build configuration to compile C# and Swift parts into a single .app file
 - [ ] Cool UI
+
+Thank you to all contributors of Twitch Downloader, this project wouldn't have been possible without core C# library
